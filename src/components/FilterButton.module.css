@@ -1,0 +1,17 @@
+.button{
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    background-color: #7b7b7b;
+    color: #FFF;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.btn-ativar{
+    background-color: #1b4993;
+}
+
+.btn-inativar{
+    background-color: #be2727;
+}

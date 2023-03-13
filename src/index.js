@@ -1,13 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Root from './routes/';
+import SectionClientes,{loader as clienteLoader} from './routes/Clientes/SectionClientes';
+import ViewCliente, {loader as viewClienteLoader,action as viewClienteAction} from './routes/Clientes/ViewCliente';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root/>,
+    children: [
+      { 
+        index: true, 
+        element: <SectionClientes/>,
+        loader: clienteLoader
+      },
+      {
+        path: "/cliente/:clienteId",
+        element: <ViewCliente/>,
+        loader: viewClienteLoader,
+        action: viewClienteAction
+      },
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

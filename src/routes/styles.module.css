@@ -1,0 +1,15 @@
+.container header{
+    height: 8vh;
+    background-color: #8a8a8a;
+}
+
+.container main{
+    min-height: 88vh;
+    padding: 0 50px;
+}
+
+.container footer{
+    height: 8vh;
+    margin-top: 20px;
+    background-color: #8a8a8a;
+}

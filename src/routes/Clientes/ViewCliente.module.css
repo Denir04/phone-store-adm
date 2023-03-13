@@ -1,0 +1,36 @@
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.title{
+    margin: 20px 0;
+}
+
+.confirm-title{
+    margin: 20px 0px 10px;
+}
+
+.box-cliente{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.box-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.box-body{
+    padding: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
