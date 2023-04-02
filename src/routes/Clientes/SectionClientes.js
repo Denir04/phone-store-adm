@@ -42,16 +42,17 @@ const Clientes = () => {
             <FilterContainer>
               <FilterButton textButton={"Aplicar Filtros"}/>
               <BoxFilterContainer title={"Status"}>
-                <Checkbox label={"ATIVO"} name={"status"} value={"ATIVO"} />
-                <Checkbox label={"INATIVO"} name={"status"} value={"INATIVO"} />
+                <Checkbox label={"ATIVO"} name={"status"} value={"Ativo"} />
+                <Checkbox label={"INATIVO"} name={"status"} value={"Inativo"} />
               </BoxFilterContainer>
               <BoxFilterContainer title={"Gênero"}>
-                <Checkbox label={"Masculino"} name={"genero"} value={"masculino"} />
-                <Checkbox label={"Feminino"} name={"genero"} value={"feminino"} />
+                <Checkbox label={"Masculino"} name={"genero"} value={"Masculino"} />
+                <Checkbox label={"Feminino"} name={"genero"} value={"Feminino"} />
+                <Checkbox label={"Outro"} name={"genero"} value={"Outro"} />
               </BoxFilterContainer>
               <BoxFilterContainer title={"Data de Nascimento"}>
-                <IntervalInput type="date" label="Minimo" name={"datanascimentomin"}/>
-                <IntervalInput type="date" label="Maximo" name={"datanascimentomax"}/>
+                <IntervalInput type="date" label="Minimo" name={"dataNascimentoMin"}/>
+                <IntervalInput type="date" label="Maximo" name={"dataNascimentoMax"}/>
               </BoxFilterContainer>
             </FilterContainer>
           </Form>

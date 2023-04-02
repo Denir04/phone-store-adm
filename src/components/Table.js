@@ -14,13 +14,13 @@ const Table = ({data}) => {
             <span>Status</span>
         </div>
         {data && data.map(dt => 
-            <div key={dt.clienteid} className={styles["row"]}>
-                <span>{dt.clienteid}</span>
+            <div key={dt.clienteId} className={styles["row"]}>
+                <span>{dt.clienteId}</span>
                 <span>{dt.nome}</span>
                 <span>{dt.genero}</span>
-                <span>{dt.datanascimento}</span>
+                <span>{dt.dataNascimento}</span>
                 <span>{dt.status}</span>
-                <Link className={styles["view-link"]} to={`cliente/${dt.clienteid}`}>Visualizar</Link>    
+                <Link className={styles["view-link"]} to={`view/${dt.clienteId}`}>Visualizar</Link>    
             </div>
         )}
     </div>

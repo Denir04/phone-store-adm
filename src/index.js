@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Root from './routes/';
+import Root from './routes/Root';
+import Login from './routes/Login';
 import SectionClientes,{loader as clienteLoader} from './routes/Clientes/SectionClientes';
 import ViewCliente, {loader as viewClienteLoader,action as viewClienteAction} from './routes/Clientes/ViewCliente';
 
@@ -13,13 +14,17 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root/>,
     children: [
+      {
+        index: true,
+        element: <Login/>
+      },
       { 
-        index: true, 
+        path: "/clientes", 
         element: <SectionClientes/>,
         loader: clienteLoader
       },
       {
-        path: "/cliente/:clienteId",
+        path: "/clientes/view/:clienteId",
         element: <ViewCliente/>,
         loader: viewClienteLoader,
         action: viewClienteAction
